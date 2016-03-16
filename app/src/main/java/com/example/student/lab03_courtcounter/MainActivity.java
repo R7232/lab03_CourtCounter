@@ -17,46 +17,46 @@ public class MainActivity extends AppCompatActivity {
     int scoreTeamB;
 
     private void TeamA(int score) {
-        TextView TeamA = (TextView) findViewById(R.id.Team_A);
+        TextView TeamA = (TextView) findViewById(R.id.team_a_score);
         TeamA.setText(String.valueOf(score));
     }
 
-    public void fraction3(View view) {
+    public void add3ForTeamA(View view) {
         scoreTeamA += 3;
         TeamA(scoreTeamA);
     }
 
-    public void fraction2(View view) {
+    public void add2ForTeamA(View view) {
         scoreTeamA += 2;
         TeamA(scoreTeamA);
     }
 
-    public void penalty(View view) {
+    public void add1ForTeamA(View view) {
         scoreTeamA += 1;
         TeamA(scoreTeamA);
     }
 
     private void TeamB(int score) {
-        TextView TeamB = (TextView) findViewById(R.id.Team_B);
+        TextView TeamB = (TextView) findViewById(R.id.team_b_score);
         TeamB.setText(String.valueOf(score));
     }
 
-    public void fraction32(View view) {
+    public void add3ForTeamB(View view) {
         scoreTeamB += 3;
         TeamB(scoreTeamB);
     }
 
-    public void fraction22(View view) {
+    public void add2ForTeamB(View view) {
         scoreTeamB += 2;
         TeamB(scoreTeamB);
     }
 
-    public void penalty2(View view) {
+    public void add1ForTeamB(View view) {
         scoreTeamB += 1;
         TeamB(scoreTeamB);
     }
 
-    public void reset(View view) {
+    public void resetScoreView(View view) {
         scoreTeamA = 0;
         scoreTeamB = 0;
         TeamA(scoreTeamA);
