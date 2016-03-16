@@ -7,7 +7,9 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.student.lab03_courtcounter.MainActivity">
+    tools:context="com.example.student.lab03_courtcounter.MainActivity"
+    android:background="#000000"
+    >
 
 
     <LinearLayout
@@ -27,14 +29,21 @@
             android:layout_marginBottom="16dp"
             >
 
+            <ImageView
+                android:src="@drawable/photo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:textColor="#1565C0"
+                />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:layout_marginTop="16dp"
                 android:gravity="center"
                 android:text="勇士"
-                android:textSize="24sp" />
+                android:textSize="30sp"
+                android:textColor="#1565C0"
+                />
 
             <TextView
                 android:id="@+id/team_a_score"
@@ -43,7 +52,9 @@
                 android:gravity="center"
                 android:layout_marginBottom="32dp"
                 android:text="0"
-                android:textSize="56sp" />
+                android:textSize="40sp"
+                android:textColor="#FFFFFF"
+                />
 
             <Button
                 android:layout_width="match_parent"
@@ -51,7 +62,11 @@
                 android:layout_marginBottom="16dp"
                 android:onClick="add3ForTeamA"
                 android:text="+3 分球"
-                android:textColor="@android:color/background_dark" />
+                android:textColor="#FFFF00"
+                android:background="#1565C0"
+                android:textSize="20sp"
+
+                />
 
             <Button
                 android:layout_width="match_parent"
@@ -59,7 +74,9 @@
                 android:layout_marginBottom="16dp"
                 android:onClick="add2ForTeamA"
                 android:text="+2分球"
-                android:textColor="@android:color/background_dark" />
+                android:textColor="#FFFF00"
+                android:background="#1565C0"
+                android:textSize="20sp"/>
 
             <Button
                 android:layout_width="match_parent"
@@ -67,7 +84,9 @@
                 android:layout_marginBottom="16dp"
                 android:onClick="add1ForTeamA"
                 android:text="罰球"
-                android:textColor="@android:color/background_dark"/>
+                android:textColor="#FFFF00"
+                android:background="#1565C0"
+                android:textSize="20sp"/>
 
 
         </LinearLayout>
@@ -90,14 +109,22 @@
             android:layout_weight="1"
             android:orientation="vertical">
 
+            <ImageView
+                android:src="@drawable/avata"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:textColor="#1565C0"
+                />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="雷霆"
-                android:layout_marginBottom="16dp"
-                android:layout_marginTop="16dp"
-                android:textSize="24sp" />
+                android:text="公牛"
+                android:textSize="30sp"
+                android:textColor="#D50000"
+                />
 
             <TextView
                 android:id="@+id/team_b_score"
@@ -106,7 +133,9 @@
                 android:gravity="center"
                 android:layout_marginBottom="32dp"
                 android:text="0"
-                android:textSize="56sp" />
+                android:textSize="40sp"
+                android:textColor="#FFFFFF"
+                />
 
             <Button
                 android:layout_width="match_parent"
@@ -114,7 +143,10 @@
                 android:layout_marginBottom="16dp"
                 android:onClick="add3ForTeamB"
                 android:text="+3分球"
-                android:textColor="@android:color/background_dark" />
+                android:textColor="#FFFFFF"
+                android:background="#D50000"
+                android:textSize="20sp"
+                />
 
             <Button
                 android:layout_width="match_parent"
@@ -122,7 +154,9 @@
                 android:layout_marginBottom="16dp"
                 android:onClick="add2ForTeamB"
                 android:text="+2分球"
-                android:textColor="@android:color/background_dark" />
+                android:textColor="#FFFFFF"
+                android:background="#D50000"
+                android:textSize="20sp" />
 
             <Button
                 android:layout_width="match_parent"
@@ -130,7 +164,9 @@
                 android:layout_marginBottom="16dp"
                 android:onClick="add1ForTeamB"
                 android:text="罰球"
-                android:textColor="@android:color/background_dark" />
+                android:textColor="#FFFFFF"
+                android:background="#D50000"
+                android:textSize="20sp" />
 
 
         </LinearLayout>
