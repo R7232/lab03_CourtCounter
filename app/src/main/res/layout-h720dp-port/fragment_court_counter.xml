@@ -1,0 +1,74 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.student.lab03_courtcounter.CourtCounterFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp"
+        >
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:src="@drawable/hornets"
+            android:layout_gravity="center"
+
+
+            />
+
+        <TextView
+            android:id="@+id/tv_team_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
+            android:text="隊名"
+            android:textColor="#1565C0"
+            android:textSize="@dimen/font_size"
+
+            />
+
+    <TextView
+        android:id="@+id/tv_team_score"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="32dp"
+        android:text="0"
+        android:textSize="50sp"
+
+        />
+
+    <Button
+        android:id="@+id/btn_three_points"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="+3 分球"
+        android:textSize="@dimen/font_size"
+
+        />
+
+    <Button
+        android:id="@+id/btn_two_points"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="+2分球"
+        android:textSize="@dimen/font_size"/>
+
+    <Button
+        android:id="@+id/btn_free_throw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="罰球"
+        android:textSize="@dimen/font_size"
+        />
+
+    </LinearLayout>
+</FrameLayout>
