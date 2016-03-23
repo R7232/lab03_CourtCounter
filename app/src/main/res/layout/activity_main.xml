@@ -7,9 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.student.lab03_courtcounter.MainActivity"
-    android:background="#000000"
-    >
+    tools:context="com.example.student.lab03_courtcounter.MainActivity">
 
 
     <LinearLayout
@@ -17,89 +15,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        >
-
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:layout_marginBottom="16dp"
-            >
-
-            <ImageView
-                android:src="@drawable/photo"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_gravity="center"
-                android:textColor="#1565C0"
-                />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="勇士"
-                android:textSize="30sp"
-                android:textColor="#1565C0"
-                />
-
-            <TextView
-                android:id="@+id/team_a_score"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_marginBottom="32dp"
-                android:text="0"
-                android:textSize="40sp"
-                android:textColor="#FFFFFF"
-                />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:onClick="add3ForTeamA"
-                android:text="+3 分球"
-                android:textColor="#FFFF00"
-                android:background="#1565C0"
-                android:textSize="20sp"
-
-                />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:onClick="add2ForTeamA"
-                android:text="+2分球"
-                android:textColor="#FFFF00"
-                android:background="#1565C0"
-                android:textSize="20sp"/>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:onClick="add1ForTeamA"
-                android:text="罰球"
-                android:textColor="#FFFF00"
-                android:background="#1565C0"
-                android:textSize="20sp"/>
-
-
-        </LinearLayout>
-
-
-        <View
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:background="@android:color/darker_gray"
-            />
-
+        android:paddingRight="16dp">
 
 
         <LinearLayout
@@ -109,64 +25,41 @@
             android:layout_weight="1"
             android:orientation="vertical">
 
-            <ImageView
-                android:src="@drawable/avata"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_gravity="center"
-                android:textColor="#1565C0"
-                />
 
-            <TextView
+
+            <fragment
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/fragment_team_a"
+                android:name="com.example.student.lab03_courtcounter.CourtCounterFragment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="公牛"
-                android:textSize="30sp"
-                android:textColor="#D50000"
-                />
+                tools:layout="@layout/fragment_court_counter" />
+        </LinearLayout>
 
-            <TextView
-                android:id="@+id/team_b_score"
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@android:color/darker_gray" />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <fragment
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/fragment_team_b"
+                android:name="com.example.student.lab03_courtcounter.CourtCounterFragment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_marginBottom="32dp"
-                android:text="0"
-                android:textSize="40sp"
-                android:textColor="#FFFFFF"
-                />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:onClick="add3ForTeamB"
-                android:text="+3分球"
-                android:textColor="#FFFFFF"
-                android:background="#D50000"
-                android:textSize="20sp"
-                />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:onClick="add2ForTeamB"
-                android:text="+2分球"
-                android:textColor="#FFFFFF"
-                android:background="#D50000"
-                android:textSize="20sp" />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:onClick="add1ForTeamB"
-                android:text="罰球"
-                android:textColor="#FFFFFF"
-                android:background="#D50000"
-                android:textSize="20sp" />
+                tools:layout="@layout/fragment_court_counter" />
 
 
         </LinearLayout>
@@ -180,8 +73,8 @@
         android:layout_centerHorizontal="true"
         android:onClick="resetScoreView"
         android:text="重置"
+        android:textSize="@dimen/font_size"
         />
-
 
 
 </RelativeLayout>
